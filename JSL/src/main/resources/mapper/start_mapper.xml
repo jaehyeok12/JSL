@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC   "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd"
+>
+<mapper namespace="com.jjh.jsl.start.StartDAO">
+	<select id="adminLogin" resultType="int">
+		select count(AdminNo) from admin where AdminID = #{param1} and AdminPW = #{param2}
+	</select>
+
+	<select id="teamLogin" resultType="int">
+		select count(TeamNO) from team where TeamID = #{param1} and TeamPW = #{param2}
+	</select>
+
+</mapper>
