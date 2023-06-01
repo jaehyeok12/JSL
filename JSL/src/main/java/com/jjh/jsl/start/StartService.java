@@ -28,4 +28,13 @@ public class StartService {
 		
 		return cnt;
 	}
+	public StartAdminDTO getAdminInfo(String id) {
+		StartAdminDTO adminDTO = startDAO.getAdminInfo(id);
+		logger.info("서비스 : "+adminDTO.getAdminName());
+		return adminDTO;
+	}
+	public StartTeamDTO getTeamInfo(String id) {
+		StartTeamDTO teamDTO = startDAO.getTeamInfo(id);
+		return teamDTO;
+	}
 }

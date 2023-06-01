@@ -40,7 +40,18 @@ public class StartController {
 			rattr.addFlashAttribute("msg", "로그인에 실패했습니다. 한 번 더 확인 후 로그인해주세요");//로그인 실패 메세지
 		}else {
 			//로그인 성공
-			session.setAttribute("Login", id);//세션에 저장
+			if(loginType.equals("admin")){
+				logger.info("관리자 드가자");
+				StartAdminDTO adminDTO = startService.getAdminInfo(id);
+				logger.info("관리자 : "+adminDTO.getAdminName());
+				session.setAttribute("adminInfo", adminDTO);//세션에 저장
+				
+			}else {
+
+				StartTeamDTO teamDTO = startService.getTeamInfo(id);
+				session.setAttribute("teamInfo", teamDTO);//세션에 저장
+			}
+			session.setAttribute("loginType", loginType);//세션에 저장
 			result = "redirect:/index.go";//메인화면 호출
 			rattr.addFlashAttribute("userType", loginType);//관계자인지 구단인지를 담아서 메인으로 이돌
 		}

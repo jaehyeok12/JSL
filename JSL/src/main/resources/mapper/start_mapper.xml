@@ -12,4 +12,11 @@
 		select count(TeamNO) from team where TeamID = #{param1} and TeamPW = #{param2}
 	</select>
 
+	<select id="getAdminInfo" resultType="admin">
+		select AdminNo, AdminID, AdminName from admin where AdminID = #{param1}
+	</select>
+	
+	<select id="getTeamInfo" resultType="team">
+		select TeamNo, TeamID, TeamName, LeagueNo, AdminNo from team where TeamID = #{param1}
+	</select>
 </mapper>

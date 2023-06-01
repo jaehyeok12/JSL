@@ -49,7 +49,7 @@
 											<div class="col-lg-1"></div>
 											<div class="col-lg-4">
 												<input class="form-check-input" type="radio"
-													name="loginType" id="adminLogin" value="admin">
+													name="loginType" id="adminLogin" value="admin" checked>
 													<label class="form-check-label" for="adminLogin"> 관계자 </label>
 											</div>
 											<div class="col-lg-2"></div>

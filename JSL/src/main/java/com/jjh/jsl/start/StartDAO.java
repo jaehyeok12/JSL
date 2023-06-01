@@ -10,4 +10,8 @@ public interface StartDAO {
 
 	int teamLogin(String id, String pw);
 
+	StartAdminDTO getAdminInfo(String id);
+
+	StartTeamDTO getTeamInfo(String id);
+
 }
