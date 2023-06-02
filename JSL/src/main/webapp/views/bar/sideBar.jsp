@@ -20,7 +20,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>구단 & 관계자 상세정보</span></a>
+                    <span>내 정보</span></a>
             </li>
 
             <!-- Divider -->
@@ -52,6 +52,11 @@
                     </div>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" onclick="location.href='teamManage.go'">
+                    <span>구단 관리</span>
+                </a>
+            </li>
 			<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
@@ -63,7 +68,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="utilities-color.html">최근 계약</a>
                         <a class="collapse-item" href="utilities-border.html">선수 관리</a>
-                        <a class="collapse-item" href="utilities-animation.html">구단 관리</a>
                         <a class="collapse-item" href="utilities-other.html">리그 관리</a>
                     </div>
                 </div>

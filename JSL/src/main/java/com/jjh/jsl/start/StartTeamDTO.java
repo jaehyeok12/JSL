@@ -9,6 +9,8 @@ public class StartTeamDTO {
 	private String teamID;
 	private int leagueNo;
 	private int adminNo;
+	private int adminName;
+
 	public int getTeamNo() {
 		return teamNo;
 	}
@@ -39,6 +41,11 @@ public class StartTeamDTO {
 	public void setAdminNo(int adminNo) {
 		this.adminNo = adminNo;
 	}
-	
+	public int getAdminName() {
+		return adminName;
+	}
+	public void setAdminName(int adminName) {
+		this.adminName = adminName;
+	}
 	
 }

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -56,6 +57,13 @@ public class StartController {
 			rattr.addFlashAttribute("userType", loginType);//관계자인지 구단인지를 담아서 메인으로 이돌
 		}
 		return result;
+	}
+	//페이지 이동
+	@GetMapping(value="/{page}.go")
+	public String innerPage(Model model, @PathVariable String page, HttpSession session) {
+		//Pathvariable을 사용해 요청명을 그대로 변수  page에 저장
+		logger.info("이동 페이지 : " + page);
+		return page;
 	}
 	
 }

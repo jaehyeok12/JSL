@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC   "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd"
+>
+<mapper namespace="com.jjh.jsl.teamManage.TeamManageDAO">
+	<select id="getLeagueList" resultType="teamManage">
+		select * from league where leagueActi = true;
+	</select>
+	<select id="getTeamList" resultType="teamManage">
+		select t.*, l.leagueName, a.AdminName from team t, league l, admin a where t.leagueNo = l.leagueNo and t.adminNo = a.adminNo
+		<if test="leagueValue > 0">and l.leagueLV = #{param1}</if>
+	</select>
+
+</mapper>
